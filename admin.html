@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | SKYRA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js" rel="stylesheet">
+    <style>
+        .admin-container { padding-top: 88px; min-height: 100vh; background: var(--color-background); }
+        .admin-tabs { display: flex; gap: 0.5rem; margin-bottom: 2rem; border-bottom: 1px solid var(--color-secondary-200); }
+        .admin-tab { padding: 1rem 1.5rem; background: none; border: none; border-bottom: 2px solid transparent; color: var(--color-text-secondary); cursor: pointer; transition: all 0.2s; }
+        .admin-tab.active { color: var(--color-accent-800); border-bottom-color: var(--color-accent-800); }
+        .admin-tab:hover { color: var(--color-accent-700); }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .stat-card { background: white; padding: 1.5rem; border-radius: 0.5rem; box-shadow: var(--shadow-card); }
+        .stat-value { font-size: 2rem; font-weight: 700; color: var(--color-foreground); }
+        .stat-label { font-size: 0.875rem; color: var(--color-text-secondary); margin-top: 0.5rem; }
+        table { width: 100%; border-collapse: collapse; background: white; border-radius: 0.5rem; overflow: hidden; box-shadow: var(--shadow-card); }
+        th { text-align: left; padding: 1rem; background: var(--color-secondary-50); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-muted); }
+        td { padding: 1rem; border-top: 1px solid var(--color-secondary-200); }
+        .search-bar { display: flex; gap: 1rem; margin-bottom: 1.5rem; }
+        .search-input { flex: 1; max-width: 400px; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container-luxury">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-text">SKYRA</span>
+                    </a>
+                </div>
+                <div class="header-actions">
+                    <a href="index.html" class="btn-ghost">Back to Site</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="admin-container">
+        <div class="container-luxury" style="padding: 2rem 0;">
+            <h1 class="section-title" style="margin-bottom: 2rem;">Admin Dashboard</h1>
+            
+            <div class="admin-tabs">
+                <button class="admin-tab active" onclick="switchTab('dashboard')">Dashboard</button>
+                <button class="admin-tab" onclick="switchTab('products')">Products</button>
+                <button class="admin-tab" onclick="switchTab('orders')">Orders</button>
+            </div>
+
+            <!-- Dashboard Tab -->
+            <div id="dashboardTab" class="tab-content active">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value" id="totalProducts">0</div>
+                        <div class="stat-label">Total Products</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="totalOrders">0</div>
+                        <div class="stat-label">Total Orders</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="totalRevenue">₹0</div>
+                        <div class="stat-label">Revenue</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="pendingOrders">0</div>
+                        <div class="stat-label">Pending Orders</div>
+                    </div>
+                </div>
+                <p style="color: var(--color-text-secondary);">Note: This is a demo admin dashboard. In a production environment, this would connect to a backend API to manage products and orders.</p>
+            </div>
+
+            <!-- Products Tab -->
+            <div id="productsTab" class="tab-content">
+                <div class="search-bar">
+                    <input type="text" id="productSearch" class="form-input search-input" placeholder="Search products...">
+                    <select id="categoryFilter" class="form-input" style="width: 200px;">
+                        <option value="all">All Categories</option>
+                        <option value="necklaces">Necklaces</option>
+                        <option value="bracelets">Bracelets</option>
+                        <option value="earrings">Earrings</option>
+                        <option value="rings">Rings</option>
+                        <option value="keychains">Keychains</option>
+                    </select>
+                    <button class="btn-primary" onclick="addProduct()">Add Product</button>
+                </div>
+                <div id="productsTable">
+                    <p style="color: var(--color-text-secondary);">Product management would be available here. Connect to your backend API to manage products.</p>
+                </div>
+            </div>
+
+            <!-- Orders Tab -->
+            <div id="ordersTab" class="tab-content">
+                <div class="search-bar">
+                    <input type="text" id="orderSearch" class="form-input search-input" placeholder="Search orders...">
+                    <select id="statusFilter" class="form-input" style="width: 200px;">
+                        <option value="all">All Status</option>
+                        <option value="pending">Pending</option>
+                        <option value="confirmed">Confirmed</option>
+                        <option value="shipped">Shipped</option>
+                        <option value="delivered">Delivered</option>
+                        <option value="cancelled">Cancelled</option>
+                    </select>
+                </div>
+                <div id="ordersTable">
+                    <p style="color: var(--color-text-secondary);">Order management would be available here. Connect to your backend API to view and manage orders.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>
+        function switchTab(tab) {
+            document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+            event.target.classList.add('active');
+            document.getElementById(tab + 'Tab').classList.add('active');
+        }
+        
+        function addProduct() {
+            alert('Product management feature would be available here. In production, this would open a modal to add/edit products.');
+        }
+        
+        // Load stats
+        document.addEventListener('DOMContentLoaded', () => {
+            const products = JSON.parse(localStorage.getItem('skyra_products') || '[]');
+            const orders = JSON.parse(localStorage.getItem('skyra_orders') || '[]');
+            
+            document.getElementById('totalProducts').textContent = products.length || 0;
+            document.getElementById('totalOrders').textContent = orders.length || 0;
+            document.getElementById('pendingOrders').textContent = orders.filter(o => o.status === 'pending').length || 0;
+            
+            const revenue = orders.reduce((sum, o) => sum + (o.totalAmount || 0), 0);
+            document.getElementById('totalRevenue').textContent = '₹' + revenue.toLocaleString('en-IN');
+        });
+    </script>
+</body>
+</html>

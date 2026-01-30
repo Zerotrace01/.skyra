@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKYRA | Everyday Luxury Under ₹500</title>
+    <meta name="description" content="Discover premium women's accessories at affordable prices. Shop necklaces, bracelets, earrings, and more. Luxury look, affordable pricing.">
+    <meta name="keywords" content="women accessories, jewelry, necklaces, earrings, bracelets, affordable luxury, India">
+    
+    <!-- Cross-browser CSS Reset & Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js" rel="stylesheet">
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar" role="banner">
+        <div class="container-luxury">
+            <p class="announcement-text">Free Shipping on Orders Above ₹499 | COD Available</p>
+        </div>
+    </div>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container-luxury">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="#" aria-label="SKYRA Home">
+                        <span class="logo-text">SKYRA</span>
+                    </a>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="nav-main" role="navigation" aria-label="Main navigation">
+                    <ul class="nav-list">
+                        <li><a href="#home" class="nav-link active">Home</a></li>
+                        <li><a href="#shop" class="nav-link">Shop</a></li>
+                        <li><a href="#collections" class="nav-link">Collections</a></li>
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- Header Actions -->
+                <div class="header-actions">
+                    <button class="btn-ghost search-btn" aria-label="Search products" type="button">
+                        <i data-lucide="search"></i>
+                    </button>
+                    <form id="headerSearchForm" class="header-search" role="search" aria-label="Search accessories">
+                        <input
+                            type="text"
+                            id="headerSearchInput"
+                            class="form-input header-search-input"
+                            placeholder="Search accessories..."
+                            autocomplete="off"
+                        >
+                    </form>
+                    <button class="btn-ghost wishlist-btn" aria-label="Wishlist" onclick="window.location.href='wishlist.html'" style="position: relative;">
+                        <i data-lucide="heart"></i>
+                        <span class="cart-count" id="wishlistCount">0</span>
+                    </button>
+                    <button class="btn-ghost cart-btn" aria-label="Shopping cart">
+                        <i data-lucide="shopping-bag"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <button class="menu-toggle" aria-label="Toggle menu">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <button class="mobile-menu-close" aria-label="Close menu">
+                <i data-lucide="x"></i>
+            </button>
+            <nav class="mobile-nav">
+                <a href="#home" class="mobile-nav-link">Home</a>
+                <a href="#shop" class="mobile-nav-link">Shop</a>
+                <a href="#collections" class="mobile-nav-link">Collections</a>
+                <a href="#about" class="mobile-nav-link">About</a>
+                <a href="#contact" class="mobile-nav-link">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="home">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Everyday Luxury<br>
+                        <span class="text-gradient-gold">Under ₹500</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Discover premium women's accessories that combine elegance with affordability. 
+                        Each piece is carefully curated to bring luxury to your everyday style.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary shop-now-btn">
+                            Shop Collection
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+                        <button class="btn-secondary explore-btn">
+                            Explore Styles
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Elegant jewelry collection" 
+                         loading="eager">
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Section -->
+        <section class="categories-section section-padding bg-white">
+            <div class="container-luxury">
+                <div class="section-header">
+                    <h2 class="section-title">Shop by Category</h2>
+                    <p class="section-subtitle">Discover our curated collections</p>
+                </div>
+                
+                <div class="collections-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                    <a href="#shop" class="collection-card" data-category="necklaces">
+                        <div class="collection-image">
+                            <img src="https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?w=800&q=80" 
+                                 alt="Necklaces Collection" loading="lazy">
+                            <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 4rem;">💎</div>
+                        </div>
+                        <div class="collection-content">
+                            <h3 class="collection-title">Necklaces</h3>
+                            <p class="collection-description">Elegant statement pieces</p>
+                            <span class="btn-ghost collection-btn">
+                                Shop Now <i data-lucide="arrow-right"></i>
+                            </span>
+                        </div>
+                    </a>
+                    
+                    <a href="#shop" class="collection-card" data-category="bracelets">
+                        <div class="collection-image">
+                            <img src="https://images.unsplash.com/photo-1611955167811-4711904bb9f8?w=800&q=80" 
+                                 alt="Bracelets Collection" loading="lazy">
+                            <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 4rem;">✨</div>
+                        </div>
+                        <div class="collection-content">
+                            <h3 class="collection-title">Bracelets</h3>
+                            <p class="collection-description">Delicate wrist accessories</p>
+                            <span class="btn-ghost collection-btn">
+                                Shop Now <i data-lucide="arrow-right"></i>
+                            </span>
+                        </div>
+                    </a>
+                    
+                    <a href="#shop" class="collection-card" data-category="earrings">
+                        <div class="collection-image">
+                            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=800&q=80" 
+                                 alt="Earrings Collection" loading="lazy">
+                            <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 4rem;">🌟</div>
+                        </div>
+                        <div class="collection-content">
+                            <h3 class="collection-title">Earrings</h3>
+                            <p class="collection-description">Timeless ear adornments</p>
+                            <span class="btn-ghost collection-btn">
+                                Shop Now <i data-lucide="arrow-right"></i>
+                            </span>
+                        </div>
+                    </a>
+                    
+                    <a href="#shop" class="collection-card" data-category="rings">
+                        <div class="collection-image">
+                            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800&q=80" 
+                                 alt="Rings Collection" loading="lazy">
+                            <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 4rem;">💍</div>
+                        </div>
+                        <div class="collection-content">
+                            <h3 class="collection-title">Rings</h3>
+                            <p class="collection-description">Beautiful finger accessories</p>
+                            <span class="btn-ghost collection-btn">
+                                Shop Now <i data-lucide="arrow-right"></i>
+                            </span>
+                        </div>
+                    </a>
+                    
+                    <a href="#shop" class="collection-card" data-category="keychains">
+                        <div class="collection-image">
+                            <img src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=800&q=80" 
+                                 alt="Keychains Collection" loading="lazy">
+                            <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 4rem;">🔑</div>
+                        </div>
+                        <div class="collection-content">
+                            <h3 class="collection-title">Keychains</h3>
+                            <p class="collection-description">Stylish everyday essentials</p>
+                            <span class="btn-ghost collection-btn">
+                                Shop Now <i data-lucide="arrow-right"></i>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Collections -->
+        <section class="collections-section section-padding" id="collections">
+            <div class="container-luxury">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Collections</h2>
+                    <p class="section-subtitle">Discover our most popular categories</p>
+                </div>
+                
+                <div class="collections-grid">
+                    <div class="collection-card">
+                        <div class="collection-image">
+                            <img src="https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                 alt="Necklaces Collection" loading="lazy">
+                        </div>
+                        <div class="collection-content">
+                            <h3 class="collection-title">Necklaces</h3>
+                            <p class="collection-description">Elegant statement pieces</p>
+                            <button class="btn-ghost collection-btn">
+                                Shop Now <i data-lucide="arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="collection-card">
+                        <div class="collection-image">
+                            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                 alt="Earrings Collection" loading="lazy">
+                        </div>
+                        <div class="collection-content">
+                            <h3 class="collection-title">Earrings</h3>
+                            <p class="collection-description">From subtle to stunning</p>
+                            <button class="btn-ghost collection-btn">
+                                Shop Now <i data-lucide="arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="collection-card">
+                        <div class="collection-image">
+                            <img src="https://images.unsplash.com/photo-1611955167811-4711904bb9f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                 alt="Bracelets Collection" loading="lazy">
+                        </div>
+                        <div class="collection-content">
+                            <h3 class="collection-title">Bracelets</h3>
+                            <p class="collection-description">Delicate wrist candy</p>
+                            <button class="btn-ghost collection-btn">
+                                Shop Now <i data-lucide="arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                    
+                    <!-- Active Filters -->
+                    <div class="active-filters" id="activeFilters" style="display: none;">
+                        <span class="active-filters-label">Active Filters:</span>
+                        <div class="active-filters-list" id="activeFiltersList"></div>
+                        <button class="clear-filters-btn" onclick="FilterManager.clearAllFilters()">
+                            Clear All
+                        </button>
+                    </div>
+                </div>
+
+                <div class="shop-container" id="shop">
+
+                    <!-- Products Grid -->
+                    <main class="products-main">
+                        <div class="products-results">
+                            <div class="results-info" id="resultsInfo">
+                                <span id="resultsCount">Showing all products</span>
+                            </div>
+                            
+                            <div class="products-grid" id="productsGrid">
+                                <!-- Products will be loaded dynamically -->
+                            </div>
+                            
+                            <div class="no-results" id="noResults" style="display: none;">
+                                <i data-lucide="search-x" class="no-results-icon"></i>
+                                <h3>No products found</h3>
+                                <p>Try adjusting your filters or search terms</p>
+                                <button class="btn-primary" onclick="FilterManager.clearAllFilters()">
+                                    Clear All Filters
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="load-more-container">
+                            <button class="btn-secondary load-more-btn" id="loadMoreBtn" style="display: none;">
+                                Load More Products
+                                <i data-lucide="arrow-down"></i>
+                            </button>
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose SKYRA -->
+        <section class="features-section section-padding">
+            <div class="container-luxury">
+                <div class="section-header">
+                    <h2 class="section-title">Why Choose SKYRA?</h2>
+                    <p class="section-subtitle">Quality you can trust</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i data-lucide="sparkles"></i>
+                        </div>
+                        <h3 class="feature-title">Premium Quality</h3>
+                        <p class="feature-description">
+                            Each piece is crafted with attention to detail using high-quality materials that last.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+                        <h3 class="feature-title">Secure Shopping</h3>
+                        <p class="feature-description">
+                            Your privacy and security are our priority with encrypted payment processing.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i data-lucide="truck"></i>
+                        </div>
+                        <h3 class="feature-title">Fast Shipping</h3>
+                        <p class="feature-description">
+                            Quick delivery across India with free shipping on orders above ₹499.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i data-lucide="heart"></i>
+                        </div>
+                        <h3 class="feature-title">Customer Love</h3>
+                        <p class="feature-description">
+                            Join thousands of happy customers who trust SKYRA for their accessory needs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3 class="cart-title">Shopping Cart</h3>
+                <button class="cart-close" aria-label="Close cart">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be populated dynamically -->
+            </div>
+            
+            <div class="cart-empty" id="cartEmpty" style="display: none;">
+                <i data-lucide="shopping-bag" class="cart-empty-icon"></i>
+                <p>Your cart is empty</p>
+                <button class="btn-primary" onclick="toggleCart()">Continue Shopping</button>
+            </div>
+            
+            <div class="cart-footer" id="cartFooter">
+                <div class="cart-total">
+                    <div class="total-row">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">₹0</span>
+                    </div>
+                    <div class="total-row">
+                        <span>Shipping:</span>
+                        <span id="shipping">₹49</span>
+                    </div>
+                    <div class="total-row total-final">
+                        <span>Total:</span>
+                        <span id="total">₹49</span>
+                    </div>
+                </div>
+                
+                <button class="btn-primary checkout-btn" onclick="openPaymentModal()">
+                    Proceed to Checkout
+                    <i data-lucide="arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div class="modal-overlay" id="paymentModal">
+        <div class="modal-content payment-modal">
+            <div class="modal-header">
+                <h3 class="modal-title">Secure Checkout</h3>
+                <button class="modal-close" onclick="closePaymentModal()" aria-label="Close payment modal">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <div class="checkout-tabs">
+                    <button class="tab-btn active" data-tab="shipping">
+                        <i data-lucide="truck"></i>
+                        Shipping
+                    </button>
+                    <button class="tab-btn" data-tab="payment">
+                        <i data-lucide="credit-card"></i>
+                        Payment
+                    </button>
+                    <button class="tab-btn" data-tab="review">
+                        <i data-lucide="check-circle"></i>
+                        Review
+                    </button>
+                </div>
+                
+                <!-- Shipping Tab -->
+                <div class="tab-content active" id="shippingTab">
+                    <form class="checkout-form" id="shippingForm">
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="fullName" class="form-label">Full Name *</label>
+                                <input type="text" id="fullName" name="fullName" class="form-input" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" class="form-input" pattern="[0-9]{10}" required>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label for="address" class="form-label">Address *</label>
+                                <textarea id="address" name="address" class="form-input" rows="3" required></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="city" class="form-label">City *</label>
+                                <input type="text" id="city" name="city" class="form-input" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="state" class="form-label">State *</label>
+                                <select id="state" name="state" class="form-input" required>
+                                    <option value="">Select State</option>
+                                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                    <option value="Bihar">Bihar</option>
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="Gujarat">Gujarat</option>
+                                    <option value="Karnataka">Karnataka</option>
+                                    <option value="Kerala">Kerala</option>
+                                    <option value="Maharashtra">Maharashtra</option>
+                                    <option value="Punjab">Punjab</option>
+                                    <option value="Rajasthan">Rajasthan</option>
+                                    <option value="Tamil Nadu">Tamil Nadu</option>
+                                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                    <option value="West Bengal">West Bengal</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="pincode" class="form-label">PIN Code *</label>
+                                <input type="text" id="pincode" name="pincode" class="form-input" pattern="[0-9]{6}" required>
+                            </div>
+                        </div>
+                        
+                        <button type="button" class="btn-primary next-tab-btn" data-next="payment">
+                            Continue to Payment
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Payment Tab -->
+                <div class="tab-content" id="paymentTab">
+                    <div class="payment-methods">
+                        <div class="payment-option" data-method="card">
+                            <input type="radio" id="payCard" name="paymentMethod" value="card">
+                            <label for="payCard" class="payment-label">
+                                <div class="payment-icon">
+                                    <i data-lucide="credit-card"></i>
+                                </div>
+                                <div class="payment-info">
+                                    <span class="payment-title">Credit/Debit Card</span>
+                                    <span class="payment-desc">Visa, Mastercard, RuPay</span>
+                                </div>
+                            </label>
+                        </div>
+                        
+                        <div class="payment-option" data-method="upi">
+                            <input type="radio" id="payUPI" name="paymentMethod" value="upi">
+                            <label for="payUPI" class="payment-label">
+                                <div class="payment-icon">
+                                    <i data-lucide="smartphone"></i>
+                                </div>
+                                <div class="payment-info">
+                                    <span class="payment-title">UPI Payment</span>
+                                    <span class="payment-desc">GPay, PhonePe, Paytm</span>
+                                </div>
+                            </label>
+                        </div>
+                        
+                        <div class="payment-option" data-method="netbanking">
+                            <input type="radio" id="payNetbanking" name="paymentMethod" value="netbanking">
+                            <label for="payNetbanking" class="payment-label">
+                                <div class="payment-icon">
+                                    <i data-lucide="building-2"></i>
+                                </div>
+                                <div class="payment-info">
+                                    <span class="payment-title">Net Banking</span>
+                                    <span class="payment-desc">All major banks</span>
+                                </div>
+                            </label>
+                        </div>
+                        
+                        <div class="payment-option" data-method="wallet">
+                            <input type="radio" id="payWallet" name="paymentMethod" value="wallet">
+                            <label for="payWallet" class="payment-label">
+                                <div class="payment-icon">
+                                    <i data-lucide="wallet"></i>
+                                </div>
+                                <div class="payment-info">
+                                    <span class="payment-title">Digital Wallets</span>
+                                    <span class="payment-desc">Paytm, Amazon Pay</span>
+                                </div>
+                            </label>
+                        </div>
+                        
+                        <div class="payment-option" data-method="cod">
+                            <input type="radio" id="payCOD" name="paymentMethod" value="cod" checked>
+                            <label for="payCOD" class="payment-label">
+                                <div class="payment-icon">
+                                    <i data-lucide="banknote"></i>
+                                </div>
+                                <div class="payment-info">
+                                    <span class="payment-title">Cash on Delivery</span>
+                                    <span class="payment-desc">Pay when delivered</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Card Details (shown when card is selected) -->
+                    <div class="card-details" id="cardDetails" style="display: none;">
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="cardNumber" class="form-label">Card Number</label>
+                                <input type="text" id="cardNumber" name="cardNumber" class="form-input" 
+                                       placeholder="1234 5678 9012 3456" maxlength="19">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="expiryDate" class="form-label">Expiry Date</label>
+                                <input type="text" id="expiryDate" name="expiryDate" class="form-input" 
+                                       placeholder="MM/YY" maxlength="5">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="cvv" class="form-label">CVV</label>
+                                <input type="password" id="cvv" name="cvv" class="form-input" 
+                                       placeholder="123" maxlength="3">
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label for="cardName" class="form-label">Cardholder Name</label>
+                                <input type="text" id="cardName" name="cardName" class="form-input" 
+                                       placeholder="Name as on card">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="button" class="btn-primary next-tab-btn" data-next="review">
+                        Review Order
+                        <i data-lucide="arrow-right"></i>
+                    </button>
+                </div>
+                
+                <!-- Review Tab -->
+                <div class="tab-content" id="reviewTab">
+                    <div class="order-review">
+                        <div class="review-section">
+                            <h4 class="review-title">Shipping Address</h4>
+                            <div class="review-content" id="reviewShipping">
+                                <!-- Shipping details will be populated -->
+                            </div>
+                        </div>
+                        
+                        <div class="review-section">
+                            <h4 class="review-title">Payment Method</h4>
+                            <div class="review-content" id="reviewPayment">
+                                <!-- Payment method will be populated -->
+                            </div>
+                        </div>
+                        
+                        <div class="review-section">
+                            <h4 class="review-title">Order Items</h4>
+                            <div class="review-items" id="reviewItems">
+                                <!-- Order items will be populated -->
+                            </div>
+                        </div>
+                        
+                        <div class="review-total">
+                            <div class="total-breakdown">
+                                <div class="total-row">
+                                    <span>Subtotal:</span>
+                                    <span id="reviewSubtotal">₹0</span>
+                                </div>
+                                <div class="total-row">
+                                    <span>Shipping:</span>
+                                    <span id="reviewShippingCost">₹49</span>
+                                </div>
+                                <div class="total-row total-final">
+                                    <span>Total:</span>
+                                    <span id="reviewTotal">₹49</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="button" class="btn-primary place-order-btn" onclick="processPayment()">
+                        <i data-lucide="lock"></i>
+                        Place Secure Order
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-content success-modal">
+            <div class="success-content">
+                <div class="success-icon">
+                    <i data-lucide="check-circle"></i>
+                </div>
+                <h3 class="success-title">Order Placed Successfully!</h3>
+                <p class="success-message">
+                    Thank you for your purchase. Your order has been confirmed and will be delivered soon.
+                </p>
+                <div class="success-details">
+                    <p><strong>Order ID:</strong> <span id="orderNumber"></span></p>
+                    <p><strong>Delivery:</strong> 3-5 business days</p>
+                </div>
+                <button class="btn-primary" onclick="closeSuccessModal()">
+                    Continue Shopping
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="section-padding bg-white" id="about">
+        <div class="container-luxury">
+            <!-- Hero Section -->
+            <div class="section-header" style="margin-bottom: 4rem;">
+                <h2 class="section-title">Our Story</h2>
+                <p class="section-subtitle">Redefining affordable luxury for the modern Indian woman</p>
+            </div>
+
+            <!-- Mission Section -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 4rem;">
+                <div>
+                    <h3 class="section-title" style="font-size: 2rem; margin-bottom: 1.5rem;">Our Mission</h3>
+                    <div style="color: var(--color-text-secondary); line-height: 1.8;">
+                        <p style="margin-bottom: 1rem;">
+                            SKYRA was born from a simple belief: every woman deserves to feel beautiful 
+                            and confident without having to spend a fortune. We noticed a gap in the 
+                            market where premium-looking accessories were either too expensive or the 
+                            affordable options looked cheap.
+                        </p>
+                        <p style="margin-bottom: 1rem;">
+                            We set out to change that. Today, SKYRA offers a curated collection of 
+                            women's accessories that look like they cost ₹2,000+ but are all priced 
+                            under ₹500. Our pieces are designed to elevate your everyday style while 
+                            being gentle on your wallet.
+                        </p>
+                        <p>
+                            Every piece in our collection is carefully selected and quality-checked to 
+                            ensure it meets our high standards. We believe that luxury should be 
+                            accessible to all, and we're on a mission to make that a reality.
+                        </p>
+                    </div>
+                </div>
+                <div style="position: relative; aspect-ratio: 1; border-radius: 1rem; overflow: hidden;">
+                    <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80" 
+                         alt="SKYRA Mission" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div style="background: var(--color-primary-500); padding: 4rem 0; border-radius: 1rem; margin-bottom: 4rem;">
+                <div class="container-luxury">
+                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center; color: white;">
+                        <div>
+                            <p style="font-family: var(--font-serif); font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem;">50K+</p>
+                            <p style="opacity: 0.8; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.1em;">Happy Customers</p>
+                        </div>
+                        <div>
+                            <p style="font-family: var(--font-serif); font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem;">500+</p>
+                            <p style="opacity: 0.8; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.1em;">Products</p>
+                        </div>
+                        <div>
+                            <p style="font-family: var(--font-serif); font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem;">100+</p>
+                            <p style="opacity: 0.8; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.1em;">Cities</p>
+                        </div>
+                        <div>
+                            <p style="font-family: var(--font-serif); font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem;">4.8</p>
+                            <p style="opacity: 0.8; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.1em;">Average Rating</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why Choose Us -->
+           
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-padding bg-secondary-50" id="contact">
+        <div class="container-luxury">
+            <div class="section-header">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-subtitle">We'd love to hear from you</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; margin-top: 3rem;">
+                <!-- Contact Info -->
+                <div>
+                    <div style="background: white; padding: 2rem; border-radius: 0.5rem; box-shadow: var(--shadow-card); margin-bottom: 1.5rem;">
+                        <h3 style="font-family: var(--font-serif); font-size: 1.25rem; margin-bottom: 1.5rem;">Contact Information</h3>
+                        
+                        <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+                            <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--color-primary-50); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i data-lucide="mail" style="width: 20px; height: 20px; color: var(--color-primary-500);"></i>
+                            </div>
+                            <div>
+                                <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 0.25rem;">Email</p>
+                                <a href="mailto:hello@skyra.in" style="color: var(--color-foreground);">hello@skyra.in</a>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+                            <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--color-primary-50); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i data-lucide="phone" style="width: 20px; height: 20px; color: var(--color-primary-500);"></i>
+                            </div>
+                            <div>
+                                <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 0.25rem;">Phone</p>
+                                <a href="tel:+919876543210" style="color: var(--color-foreground);">+91 98765 43210</a>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+                            <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--color-primary-50); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i data-lucide="map-pin" style="width: 20px; height: 20px; color: var(--color-primary-500);"></i>
+                            </div>
+                            <div>
+                                <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 0.25rem;">Address</p>
+                                <p style="color: var(--color-foreground);">
+                                    123 Fashion Street<br>
+                                    Mumbai, Maharashtra 400001<br>
+                                    India
+                                </p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 1rem;">
+                            <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--color-primary-50); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i data-lucide="clock" style="width: 20px; height: 20px; color: var(--color-primary-500);"></i>
+                            </div>
+                            <div>
+                                <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 0.25rem;">Business Hours</p>
+                                <p style="color: var(--color-foreground);">
+                                    Mon - Sat: 10:00 AM - 7:00 PM<br>
+                                    Sunday: Closed<br>
+                                    <span style="font-size: 0.75rem; color: var(--color-text-muted);">Customer support available 24/7 via email</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Info Cards -->
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; box-shadow: var(--shadow-card); margin-bottom: 1rem;">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                            <i data-lucide="truck" style="width: 20px; height: 20px; color: var(--color-primary-500);"></i>
+                            <h4 style="font-family: var(--font-serif); font-size: 0.875rem;">Shipping Information</h4>
+                        </div>
+                        <p style="font-size: 0.75rem; color: var(--color-text-secondary);">
+                            Free shipping on orders above ₹499. Standard delivery takes 3-5 business days. 
+                            Express delivery available for select locations.
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; box-shadow: var(--shadow-card); margin-bottom: 1rem;">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                            <i data-lucide="package" style="width: 20px; height: 20px; color: var(--color-primary-500);"></i>
+                            <h4 style="font-family: var(--font-serif); font-size: 0.875rem;">Returns & Exchanges</h4>
+                        </div>
+                        <p style="font-size: 0.75rem; color: var(--color-text-secondary);">
+                            Easy 7-day return policy. Items must be unused and in original packaging. 
+                            Refunds processed within 5-7 business days.
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; box-shadow: var(--shadow-card);">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                            <i data-lucide="shield" style="width: 20px; height: 20px; color: var(--color-primary-500);"></i>
+                            <h4 style="font-family: var(--font-serif); font-size: 0.875rem;">Secure Shopping</h4>
+                        </div>
+                        <p style="font-size: 0.75rem; color: var(--color-text-secondary);">
+                            Your payment information is secure. We use industry-standard encryption to 
+                            protect your data. Multiple payment options available.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div style="background: white; padding: 2rem; border-radius: 0.5rem; box-shadow: var(--shadow-card);">
+                    <h3 style="font-family: var(--font-serif); font-size: 1.25rem; margin-bottom: 1.5rem;">Send us a Message</h3>
+                    <form id="contactForm" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div>
+                                <label style="display: block; font-size: 0.875rem; color: var(--color-text-secondary); margin-bottom: 0.5rem;">Your Name *</label>
+                                <input type="text" name="name" required class="form-input" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label style="display: block; font-size: 0.875rem; color: var(--color-text-secondary); margin-bottom: 0.5rem;">Email Address *</label>
+                                <input type="email" name="email" required class="form-input" placeholder="your@email.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label style="display: block; font-size: 0.875rem; color: var(--color-text-secondary); margin-bottom: 0.5rem;">Subject *</label>
+                            <select name="subject" required class="form-input">
+                                <option value="">Select a topic</option>
+                                <option value="order">Order Inquiry</option>
+                                <option value="shipping">Shipping & Delivery</option>
+                                <option value="returns">Returns & Refunds</option>
+                                <option value="product">Product Question</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label style="display: block; font-size: 0.875rem; color: var(--color-text-secondary); margin-bottom: 0.5rem;">Message *</label>
+                            <textarea name="message" required rows="5" class="form-input" placeholder="How can we help you?"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            <i data-lucide="send" style="width: 16px; height: 16px; margin-right: 0.5rem;"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container-luxury">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-text">SKYRA</span>
+                        <p class="footer-tagline">Everyday luxury under ₹500</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Follow us on Instagram">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Follow us on Facebook">
+                            <i data-lucide="facebook"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Follow us on Twitter">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#shop">Shop</a></li>
+                        <li><a href="#collections">Collections</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Customer Care</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p class="newsletter-text">Get updates on new arrivals and exclusive offers</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Enter your email">
+                        <button type="submit" class="newsletter-btn">
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 SKYRA. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification Toast -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <i data-lucide="check-circle" class="toast-icon"></i>
+            <span class="toast-message">Product added to cart!</span>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
